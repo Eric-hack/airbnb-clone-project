@@ -178,3 +178,30 @@ Allows users to post and manage reviews for properties they have stayed at. This
 
 ### Database Optimizations
 Indexing and caching strategies are implemented to improve database performance. Indexes speed up data retrieval for frequently accessed queries, while caching reduces database load by serving repeated requests from memory.
+
+## API Security
+
+Securing the backend APIs is critical to protect sensitive data, maintain trust, and ensure the platform functions reliably. The following key measures will be implemented:
+
+### Authentication
+Only registered users can access protected endpoints using secure authentication mechanisms such as JWT (JSON Web Tokens). This ensures that user sessions are verified and prevents unauthorized access to the system.
+
+### Authorization
+Role-based access control (RBAC) will be enforced to restrict what different users (e.g., host, guest, admin) can do. For example, only hosts can manage properties, and only admins can manage all user accounts. This prevents misuse of features by unauthorized users.
+
+### Rate Limiting
+Rate limiting will be applied to APIs to prevent abuse through excessive requests, such as brute-force login attempts or denial-of-service (DoS) attacks. This ensures fair use and preserves system stability.
+
+### Data Protection
+Sensitive information such as passwords and payment details will be encrypted at rest and in transit (using HTTPS and database encryption). This protects user data from breaches and interception.
+
+### Secure Payments
+Payment processing will be protected using industry-standard security protocols and integration with trusted payment gateways. This reduces the risk of fraud and ensures transactions remain secure.
+
+---
+
+### Why Security Is Crucial
+- Protecting User Data: Ensures personal information such as names, emails, and passwords are not exposed.  
+- Securing Payments: Prevents fraud and builds trust in the platform’s financial transactions.  
+- Maintaining Platform Integrity: Prevents malicious actors from exploiting vulnerabilities, ensuring reliable and safe use for all users.  
+- Compliance: Helps meet security standards and regulations required for handling sensitive information.  

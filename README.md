@@ -205,3 +205,16 @@ Payment processing will be protected using industry-standard security protocols 
 - Securing Payments: Prevents fraud and builds trust in the platform’s financial transactions.  
 - Maintaining Platform Integrity: Prevents malicious actors from exploiting vulnerabilities, ensuring reliable and safe use for all users.  
 - Compliance: Helps meet security standards and regulations required for handling sensitive information.  
+
+
+## CI/CD Pipeline
+
+Continuous Integration and Continuous Deployment (CI/CD) pipelines automate the process of building, testing, and deploying the application. They ensure that code changes are integrated smoothly, tested thoroughly, and delivered quickly to production without manual intervention.
+
+### Importance
+CI/CD pipelines help maintain high code quality by running automated tests on every change. They reduce the risk of introducing bugs, speed up the release cycle, and provide faster feedback to developers. This results in a more reliable and efficient development process.
+
+### Tools
+- GitHub Actions: Automates workflows such as running tests, linting code, and deploying updates when new changes are pushed.  
+- Docker: Ensures consistency across development, testing, and production environments by containerizing the application.  
+- Heroku or AWS: Used as deployment environments to host and scale the application.  

@@ -61,3 +61,29 @@ Responsibilities in this project:
 - Validate that features meet project requirements.  
 - Ensure code quality through automated testing and reporting.  
 
+## Technology Stack
+## Technology Stack
+
+### Django  
+A high-level Python web framework used for building the RESTful API. It provides built-in tools for authentication, ORM (Object Relational Mapping), and secure development.
+
+### Django REST Framework (DRF)  
+An extension of Django that provides additional tools for creating and managing RESTful APIs. It simplifies serialization, authentication, and permission handling.
+
+### PostgreSQL  
+A powerful relational database used for data storage. It ensures reliability, scalability, and strong data integrity for managing users, property listings, bookings, and reviews.
+
+### GraphQL  
+A query language for APIs that allows for flexible and efficient data querying. It enables clients to request only the data they need, reducing over-fetching and under-fetching.
+
+### Celery  
+A distributed task queue used for handling asynchronous tasks such as sending notifications, processing payments, or scheduling background jobs.
+
+### Redis  
+An in-memory data store used for caching and session management. It improves application performance by reducing database load and speeding up data retrieval.
+
+### Docker  
+A containerization tool that ensures consistent development and deployment environments. It allows the application to run reliably across different systems.
+
+### CI/CD Pipelines  
+Automated pipelines for testing and deploying code changes. They help maintain code quality, reduce manual work, and ensure faster, reliable releases.

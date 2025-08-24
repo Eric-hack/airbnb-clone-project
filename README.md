@@ -150,3 +150,31 @@ Important fields:
 - A **booking** is linked to one **property** and one **user**.  
 - A **booking** can have one associated **payment**.  
 - A **property** can have multiple **reviews**, each written by different users.  
+
+## Feature Breakdown
+
+### API Documentation
+The backend APIs are documented using the OpenAPI standard, ensuring clarity, consistency, and ease of integration with external systems. Django REST Framework provides a comprehensive RESTful API for CRUD operations, while GraphQL offers a flexible and efficient query mechanism for interacting with the backend.
+
+### User Authentication
+Endpoints: `/users/`, `/users/{user_id}/`  
+This feature allows new users to register, authenticate securely, and manage their profiles. It ensures that access to resources is protected and user sessions are properly maintained.
+
+### Property Management
+Endpoints: `/properties/`, `/properties/{property_id}/`  
+Hosts can create, update, retrieve, and delete property listings through this feature. It enables users to showcase available accommodations with essential details like location, pricing, and availability.
+
+### Booking System
+Endpoints: `/bookings/`, `/bookings/{booking_id}/`  
+This feature enables guests to make, update, and manage bookings for properties. It tracks check-in and check-out details, ensuring a smooth reservation process for both guests and hosts.
+
+### Payment Processing
+Endpoints: `/payments/`  
+Handles financial transactions associated with bookings. It ensures that payments are securely processed, tracked, and linked to reservations, improving trust and accountability on the platform.
+
+### Review System
+Endpoints: `/reviews/`, `/reviews/{review_id}/`  
+Allows users to post and manage reviews for properties they have stayed at. This helps build credibility for hosts and provides valuable feedback for future guests.
+
+### Database Optimizations
+Indexing and caching strategies are implemented to improve database performance. Indexes speed up data retrieval for frequently accessed queries, while caching reduces database load by serving repeated requests from memory.

@@ -87,3 +87,66 @@ A containerization tool that ensures consistent development and deployment envir
 
 ### CI/CD Pipelines  
 Automated pipelines for testing and deploying code changes. They help maintain code quality, reduce manual work, and ensure faster, reliable releases.
+
+## Database Design
+
+### Key Entities
+
+#### Users
+Represents people who use the platform as hosts or guests.  
+Important fields:  
+- id (Primary Key)  
+- name  
+- email  
+- password_hash  
+- role (host, guest, admin)  
+
+#### Properties
+Represents listings created by hosts for rent.  
+Important fields:  
+- id (Primary Key)  
+- user_id (Foreign Key → Users)  
+- title  
+- description  
+- location  
+- price_per_night  
+
+#### Bookings
+Represents reservations made by users for properties.  
+Important fields:  
+- id (Primary Key)  
+- user_id (Foreign Key → Users)  
+- property_id (Foreign Key → Properties)  
+- check_in_date  
+- check_out_date  
+- status (pending, confirmed, cancelled)  
+
+#### Reviews
+Represents feedback left by users after a booking.  
+Important fields:  
+- id (Primary Key)  
+- user_id (Foreign Key → Users)  
+- property_id (Foreign Key → Properties)  
+- rating (1–5)  
+- comment  
+- created_at  
+
+#### Payments
+Represents transactions made for bookings.  
+Important fields:  
+- id (Primary Key)  
+- booking_id (Foreign Key → Bookings)  
+- amount  
+- payment_method  
+- status (pending, completed, failed)  
+- created_at  
+
+---
+
+### Entity Relationships
+- A **user** can have multiple **properties** (host role).  
+- A **user** can make multiple **bookings** for different **properties** (guest role).  
+- A **property** can have multiple **bookings**.  
+- A **booking** is linked to one **property** and one **user**.  
+- A **booking** can have one associated **payment**.  
+- A **property** can have multiple **reviews**, each written by different users.  
